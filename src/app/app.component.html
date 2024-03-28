@@ -1,7 +1,29 @@
 <div class="pt-6 px-6 max-w-7xl mx-auto">
   <app-header />
 
-  <main>
-    
+  <main class="mt-20">
+    <section class="px-10 py-5 border-solid border-[1px] border-[#AAAAAA] flex flex-row justify-between">
+      <div class="flex flex-col gap-20 max-w-[60ch]">
+        <p class="text-2xl text-[#EB6D9D] uppercase">
+          Welcome to Abano Cosmetics, where we believe in the power of natural beauty. Our mission is to create effective, high-quality cosmetics that enhance your natural features and leave you feeling confident and beautiful.
+        </p>
+
+        <button class="px-14 py-5 bg-[#EB6D9D] text-white text-2xl w-fit">
+          SHOP NOW
+        </button>
+      </div>
+
+      <div class="flex flex-row items-end">
+        <img src="assets/images/banner1.svg" alt="banner1">
+        <img src="assets/images/banner2.svg" alt="banner2">
+        <img src="assets/images/banner3.svg" alt="banner3">
+      </div>
+    </section>
+
+    <section class="mt-20 px-40 flex flex-row justify-between gap-4">
+      @for (prod of productTypes; track prod.id) {
+        <app-product-type name="{{prod.name}}" imgUrl="{{prod.imgUrl}}" imgAlt="{{prod.imgAlt}}" />
+      }
+    </section>
   </main>
 </div>
