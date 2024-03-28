@@ -1,0 +1,17 @@
+<div class="flex flex-col items-center">
+    <h1 class="text-4xl font-semibold underline mb-12">
+        BEST SELLING PRODUCTS
+    </h1>
+    
+    <div class="flex flex-row gap-4 justify-between w-full">
+        @for (prod of bestSellingProducts; track prod.id) {
+            <app-product-card 
+                name="{{prod.name}}" 
+                price="{{prod.price}}"
+                imgUrl="{{prod.imgUrl}}"
+                imgAlt="{{prod.imgAlt}}"
+            />
+        }
+    </div>
+    
+</div>

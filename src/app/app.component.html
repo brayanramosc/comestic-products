@@ -1,7 +1,7 @@
 <div class="pt-6 px-6 max-w-7xl mx-auto">
   <app-header />
 
-  <main class="mt-20">
+  <main class="my-20">
     <section class="px-10 py-5 border-solid border-[1px] border-[#AAAAAA] flex flex-row justify-between">
       <div class="flex flex-col gap-20 max-w-[60ch]">
         <p class="text-2xl text-[#EB6D9D] uppercase">
@@ -24,6 +24,10 @@
       @for (prod of productTypes; track prod.id) {
         <app-product-type name="{{prod.name}}" imgUrl="{{prod.imgUrl}}" imgAlt="{{prod.imgAlt}}" />
       }
+    </section>
+
+    <section class="mt-20">
+      <app-best-selling-products />
     </section>
   </main>
 </div>
