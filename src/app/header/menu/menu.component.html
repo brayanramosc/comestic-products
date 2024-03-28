@@ -1,0 +1,15 @@
+<nav>
+    <ul class="flex flex-row gap-10 sm:gap-20 justify-end">
+        @for (opt of menuOptions; track opt.id) {
+            <li 
+                class="
+                    text-lg font-semibold cursor-pointer hover:text-[#EB6D9D] 
+                    {{selectedIndex === opt.id ? 'text-[#EB6D9D]' : 'text-[#3C3C3C]'}}
+                "
+                (click)="handleSelectOption(opt.id)"
+            >
+                {{opt.name}}
+            </li>
+        }
+    </ul>
+</nav>
