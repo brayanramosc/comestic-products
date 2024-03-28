@@ -3,11 +3,12 @@ import { RouterOutlet } from '@angular/router';
 import { HeaderModule } from './header/header.module';
 import { ProductTypeComponent } from './product-type/product-type.component';
 import { BestSellingProductsModule } from './best-selling-products/best-selling-products.module';
+import { CommentsModule } from './comments/comments.module';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, HeaderModule, ProductTypeComponent, BestSellingProductsModule],
+  imports: [RouterOutlet, HeaderModule, ProductTypeComponent, BestSellingProductsModule, CommentsModule],
   templateUrl: './app.component.html'
 })
 export class AppComponent {

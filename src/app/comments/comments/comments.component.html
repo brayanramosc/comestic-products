@@ -1,0 +1,19 @@
+<div class="flex flex-col items-center">
+    <h1 class="text-4xl font-semibold underline mb-12">
+        CUSTOMER REVIEWS
+    </h1>
+    
+    <div class="flex flex-row gap-4 justify-between w-full">
+        <img src="assets/images/left_arrow.svg" alt="left_arrow">
+
+        @for (comment of comments; track comment.id) {
+            <app-comment
+                comment="{{comment.comment}}" 
+                user="{{comment.user}}"
+            />
+        }
+
+        <img src="assets/images/right_arrow.svg" alt="right_arrow">
+    </div>
+    
+</div>
